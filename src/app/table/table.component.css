@@ -13,6 +13,7 @@
 }
 
 .table-container table {
+  margin-bottom: 50px;
   width: 90%;
 }
 
@@ -27,7 +28,7 @@
 }
 
 .empty-products {
-  margin-top: 50px;
+  margin: 50px 0px 50px 0px;
   width: 100%;
   text-align: center;
 }

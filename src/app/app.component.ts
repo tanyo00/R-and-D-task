@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormControl} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-root',
@@ -8,23 +8,34 @@ import {FormControl} from "@angular/forms";
 })
 export class AppComponent {
 
+  productForm = new FormGroup({
+    name: new FormControl("", [Validators.required]),
+    price: new FormControl("", [Validators.required]),
+    address: new FormControl("", [Validators.required]),
+    email: new FormControl("", [Validators.required, Validators.email]),
+    number: new FormControl("", [Validators.required])
+  });
+
   
   products = [
    
   ];
   
-  onSubmit = (name: string, price: number, address: string, email: string, number: string) => {
-
-    let product = {
-      name: name,
-      price: price,
-      address: address,
-      email: email,
-      number: number
+  onSubmit = () => {
+    let user = {
+      name: this.productForm.get('name').value,
+      price: this.productForm.get('price').value,
+      address: this.productForm.get('address').value,
+      email : this.productForm.get('email').value,
+      number: this.productForm.get('number').value,
     };
 
-    this.products = [...this.products, product]
-    console.log(this.products)
+    if(
+      this.productForm.valid
+    ) {
+      this.products = [...this.products, user];
+      this.productForm.reset();
+    }   
   }
 
 

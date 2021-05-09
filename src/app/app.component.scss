@@ -1,5 +1,30 @@
 .form-container {
     width: 100%;
-    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    form {
+        box-shadow: 3px 3px 8px gray;
+        border-radius: 5px;
+        margin-top: 50px;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h1 {
+            padding: 20px;
+        }
+        .example-full-width {
+            margin-top: 10px;
+            width: 50%;
+            font-size: 17px;
+        }
+        .submit-btn {
+            margin: 20px 0px 20px 0px;
+            width: 200px;
+        }
+    }
 }
 

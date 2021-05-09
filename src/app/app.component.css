@@ -1,5 +1,53 @@
 .form-container {
   width: 100%;
-  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-container form {
+  -webkit-box-shadow: 3px 3px 8px gray;
+          box-shadow: 3px 3px 8px gray;
+  border-radius: 5px;
+  margin-top: 50px;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-container form h1 {
+  padding: 20px;
+}
+
+.form-container form .example-full-width {
+  margin-top: 10px;
+  width: 50%;
+  font-size: 17px;
+}
+
+.form-container form .submit-btn {
+  margin: 20px 0px 20px 0px;
+  width: 200px;
 }
 /*# sourceMappingURL=app.component.css.map */
