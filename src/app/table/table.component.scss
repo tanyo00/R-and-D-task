@@ -1,0 +1,24 @@
+.table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    table {
+        width: 90%;
+        th {
+            text-align: center;
+            font-size: 17px;
+        }
+        td {
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+}
+
+.empty-products {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+}
