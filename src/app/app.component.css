@@ -50,4 +50,16 @@
   margin: 20px 0px 20px 0px;
   width: 200px;
 }
+
+@media screen and (max-width: 785px) {
+  .form-container form {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .form-container form {
+    width: 90%;
+  }
+}
 /*# sourceMappingURL=app.component.css.map */

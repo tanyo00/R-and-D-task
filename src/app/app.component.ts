@@ -8,6 +8,8 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 })
 export class AppComponent {
 
+  // create form group which groups form values
+  // and validate them with different validators
   productForm = new FormGroup({
     name: new FormControl("", [Validators.required]),
     price: new FormControl("", [Validators.required]),
@@ -16,13 +18,18 @@ export class AppComponent {
     number: new FormControl("", [Validators.required])
   });
 
-  
+  // products array (stores all products objects)
   products = [
-   
   ];
   
+
+  removeProduct = (newItem) => {
+    this.products = this.products.filter((product) => product.name !== newItem.name);
+  }
+
+
   onSubmit = () => {
-    let user = {
+    let product = {
       name: this.productForm.get('name').value,
       price: this.productForm.get('price').value,
       address: this.productForm.get('address').value,
@@ -30,10 +37,12 @@ export class AppComponent {
       number: this.productForm.get('number').value,
     };
 
+    // if all validators are valid add our product to the products array
+
     if(
       this.productForm.valid
     ) {
-      this.products = [...this.products, user];
+      this.products = [...this.products, product];
       this.productForm.reset();
     }   
   }

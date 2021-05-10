@@ -4,6 +4,7 @@
     <mat-form-field class="example-full-width">
         <mat-label>Name</mat-label>
         <input matInput type="text" required formControlName="name" placeholder="Enter name..."/>
+        <!-- if the input is empty -->
         <mat-error *ngIf="productForm.get('name').hasError('required')">
             Name is <strong>required</strong>
           </mat-error>
@@ -32,7 +33,7 @@
         <mat-label>Email</mat-label>
         <input matInput type="email" required formControlName="email" placeholder="Enter email..."/>
 
-
+        <!-- if the input isn't empty and doesn't contain @ symbol-->
         <mat-error *ngIf="productForm.get('email').hasError('email') && !productForm.get('email').hasError('required')">
             Please enter a valid email address!
           </mat-error>
@@ -44,7 +45,7 @@
 
     <mat-form-field class="example-full-width">
         <mat-label>Phone number</mat-label>
-        <input matInput type="number" required formControlName="number" placeholder="Enter phone number..."/>
+        <input matInput type="text" required formControlName="number" placeholder="Enter phone number..."/>
         <mat-error *ngIf="productForm.get('number').hasError('required')">
             Phone number is <strong>required</strong>
           </mat-error>
@@ -58,4 +59,7 @@
 
 
 
-<app-table [productsData]="products" ></app-table>
+<app-table 
+[productsData]="products" 
+(newEvent)="removeProduct($event)"
+></app-table>
