@@ -8,12 +8,26 @@
         margin-bottom: 50px;
         width: 90%;
         th {
+            padding: 2px;
             text-align: center;
             font-size: 17px;
+            @media screen and(max-width: 535px){
+                font-size: 13px;
+            }
         }
         td {
+            padding: 3px;
+            border-right: 1px solid lightgray;
             font-size: 16px;
             text-align: center;
+            @media screen and(max-width: 700px){
+                font-size: 13px;
+            }
+
+            @media screen and(max-width: 535px) {
+                font-size: 11px;
+            }
+
         }
     }
 }
